@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ddd;
+}
+
+.container {
+  width: 900px;
+  height: 600px;
+  background-color: #fff;
+  margin: 150px auto;
+  position: relative;
+}
+
+.child1 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  margin-left: 350px;
+  background-color: rgb(222, 89, 45);
+  animation-name: move;
+  animation-duration: 500ms;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function:cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+@keyframes move {
+  from {
+    bottom: 100px;
+    border-radius: 50%;
+  }
+  to {
+    bottom: calc(100% - 200px);
+    border-radius: 50%;
+  }
+}
